@@ -30,6 +30,13 @@ dl {
  list-style: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+ body {
+  margin-inline: auto;
+ }
+
 :root {
  --color-heading-primary: #2E2F42;
  --color-contrast-bright: #F4F4FD;
@@ -64,6 +71,81 @@ body {
  margin: 0;
 }
 
+
+
+@media screen and (min-width: 768px){
+  .container {
+    width: 768px;
+    padding: 0 16px;
+   }
+   .container-footer {
+    width: 768px;
+    padding: 0 16px;
+   }
+
+   .text-h1-first {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+    max-width: 496px;
+    margin: 0 0 36px;
+   }
+   .button-primary {
+    cursor: pointer;
+   }
+   .button-primary:hover,
+   .button-primary:focus {
+    background-color: var(--color-active);
+    transition: var(--transition-variable);
+   }
+   .company-values-list {
+    column-gap: 24px;
+    row-gap: 72px;
+   }
+   .company-values-list-element {
+    width: calc((100% - 24px)/2)
+   }
+   
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+   }
+   
+   .container-footer {
+    width: 1158px;
+    padding: 0 15px;
+   }
+
+   .h1-section {
+   padding: 188px 0;
+   }
+
+   .text-h1-first {
+    margin: 0 0 48px;
+   }
+
+   .company-values {
+    padding: 120px 0;
+   }
+   .company-values-list {
+    gap: 24px;
+   }
+   .company-values-list-element {
+    width: calc((100% - 72px)/4)
+   }
+
+   .icon-wrapper-company-values {
+    visibility: visible;
+    border-radius: 4px;
+    background: var(--color-contrast-bright);
+    padding: 24px 100px;
+    margin-bottom: 8px;
+   }
+}
+
 .text-h2 {
  color: var(--color-heading-primary);
  text-align: center;
@@ -86,16 +168,16 @@ body {
 
 .container {
  display: flex;
- width: 1158px;
- padding: 0 15px;
+ width: 428px;
+ padding: 0 16px;
  margin: 0 auto;
  justify-content: space-between;
 }
 
 .container-footer {
   display: flex;
-  width: 1158px;
-  padding: 0 15px;
+  width: 428px;
+  padding: 0 16px;
   margin: 0 auto;
  }
 
@@ -260,24 +342,23 @@ padding-bottom: 16px;
  background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office.jpg);
  background-repeat: no-repeat;
  background-position: center;
- padding: 188px 0;
+ padding: 112px 0;
 }
 
 .icon-wrapper-company-values {
-  border-radius: 4px;
-  background: var(--color-contrast-bright);
-  padding: 24px 100px;
-  margin-bottom: 8px;
+  visibility: hidden;
+  height: 0;
  }
 
 .text-h1-first {
  color: var(--color-contrast-brighter);
  text-align: center;
- font-size: 56px;
- line-height: 1.07;
- letter-spacing: 1.12px;
- max-width: 496px;
- margin: 0 0 48px;
+ font-size: 36px;
+ line-height: 1.11;
+ letter-spacing: 0.72px;
+ max-width: 320px;
+ margin: 0 0 72px;
+ text-transform: capitalize;
 }
 
 .button-primary {
@@ -287,20 +368,15 @@ padding-bottom: 16px;
  font-weight: 500;
  line-height: 1.5;
  letter-spacing: 0.64px;
- cursor: pointer;
  display: block;
- min-width: 169px;
+ width: 169px;
  height: 56px;
  border: none;
  border-radius: 4px;
  margin: auto;
 }
 
-.button-primary:hover,
-.button-primary:focus {
- background-color: var(--color-active);
- transition: var(--transition-variable);
-}
+
 
 
 
@@ -309,18 +385,19 @@ padding-bottom: 16px;
 
 
 .company-values {
- padding: 120px 0;
+ padding: 96px 0;
 }
 
 .company-values-list {
  display: flex;
- gap: 24px;
+ flex-wrap: wrap;
+ gap: 72px;
  padding-left: 0;
  margin: 0;
 }
 
 .company-values-list-element {
- width: calc((100% - 72px)/4)
+ width: 100%;
 }
 
 
