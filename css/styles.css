@@ -73,98 +73,36 @@ body {
 
 
 
-@media screen and (min-width: 768px){
-  .container {
-    width: 768px;
-    padding: 0 16px;
-   }
-   .container-footer {
-    width: 768px;
-    padding: 0 16px;
-   }
 
-   .text-h1-first {
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 1.12px;
-    max-width: 496px;
-    margin: 0 0 36px;
-   }
-   .button-primary {
-    cursor: pointer;
-   }
-   .button-primary:hover,
-   .button-primary:focus {
-    background-color: var(--color-active);
-    transition: var(--transition-variable);
-   }
-   .company-values-list {
-    column-gap: 24px;
-    row-gap: 72px;
-   }
-   .company-values-list-element {
-    width: calc((100% - 24px)/2)
-   }
-   
-}
 
-@media screen and (min-width: 1200px){
-  .container {
-    width: 1158px;
-    padding: 0 15px;
-   }
-   
-   .container-footer {
-    width: 1158px;
-    padding: 0 15px;
-   }
-
-   .h1-section {
-   padding: 188px 0;
-   }
-
-   .text-h1-first {
-    margin: 0 0 48px;
-   }
-
-   .company-values {
-    padding: 120px 0;
-   }
-   .company-values-list {
-    gap: 24px;
-   }
-   .company-values-list-element {
-    width: calc((100% - 72px)/4)
-   }
-
-   .icon-wrapper-company-values {
-    visibility: visible;
-    border-radius: 4px;
-    background: var(--color-contrast-bright);
-    padding: 24px 100px;
-    margin-bottom: 8px;
-   }
-}
-
-.text-h2 {
+.text-h3 {
  color: var(--color-heading-primary);
  text-align: center;
  font-size: 36px;
  line-height: 1.11;
  letter-spacing: 0.72px;
  text-transform: capitalize;
- margin: 0 0 72px;
+ font-weight: 700;
+ margin: 0 0 8px;
 }
+.text-h2 {
+  color: var(--color-heading-primary);
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.72px;
+  text-transform: capitalize;
+  margin: 0 0 72px;
+ }
 
-
-.text-h3 {
+/* .text-h3 {
  color: var(--color-heading-primary);
  font-size: 20px;
  font-weight: 500;
  line-height: 1.2;
  letter-spacing: 0.4px;
  margin: 0 0 8px;
-}
+} */
 
 .container {
  display: flex;
@@ -217,12 +155,10 @@ body {
 }
 
 .logo {
- display: inline-block;
- margin-right: 76px;
- text-decoration: none;
-}
-
-
+  display: inline-block;
+  margin: 24px auto 22px 0;
+  text-decoration: none;
+ }
 
 .logo-web-font {
  color: var(--color-contrast-dark);
@@ -298,20 +234,16 @@ body {
 }
 
 .address-list {
- display: flex;
- gap: 40px;
- margin: 0;
- padding: 24px 0;
-}
+  display: flex;
+  flex-direction: column;
+ }
 
 .text-contacts {
- color: var(--color-font-main);
- font-size: 16px;
- line-height: 1.5;
- letter-spacing: 0.32px;
- font-style: normal;
- text-decoration: none;
+  color: var(--color-font-main);
+  font-style: normal;
+  text-decoration: none;
 }
+
 
 .text-contacts:hover,
 .text-contacts:focus {
@@ -346,8 +278,7 @@ padding-bottom: 16px;
 }
 
 .icon-wrapper-company-values {
-  visibility: hidden;
-  height: 0;
+  display: none;
  }
 
 .text-h1-first {
@@ -398,11 +329,14 @@ padding-bottom: 16px;
 
 .company-values-list-element {
  width: 100%;
+
 }
 
 
 .company-activities {
  padding-bottom: 120px;
+ display: none;
+
 }
 
 .company-activities-list {
@@ -422,15 +356,17 @@ padding-bottom: 16px;
 
 .our-team-section {
  background-color: var(--color-contrast-bright);
- padding: 120px 0;
+ padding: 96px 0;
+ justify-content: center;
 }
 
 .our-team-list {
  display: flex;
- gap: 24px;
+ flex-wrap: wrap;
+ gap: 72px;
  padding-left: 0;
  margin: 0;
- justify-content: space-between;
+ justify-content: center;
 }
 
 .icon-wrapper-our-team {
@@ -449,7 +385,7 @@ padding-bottom: 16px;
 }
 
 .our-team-list-element {
- width: calc((100% - 72px)/4);
+ width: 264px;
  border-radius: 0 0 4px 4px;
 }
 
@@ -582,9 +518,12 @@ padding-bottom: 16px;
 
 .customers-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 72px;
   padding-left: 0;
   margin: auto;
+  justify-content: center;
 }
 
 .customers {
@@ -964,4 +903,159 @@ input[type="checkbox"] {
 
 input:checked + .checkmark {
   opacity: 1;
+}
+
+
+@media screen and (min-width: 768px){
+  .container {
+    width: 768px;
+    padding: 0 16px;
+   }
+   .container-footer {
+    width: 768px;
+    padding: 0 16px;
+   }
+
+   .text-h1-first {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 1.12px;
+    max-width: 496px;
+    margin: 0 0 36px;
+   }
+   .button-primary {
+    cursor: pointer;
+   }
+   .button-primary:hover,
+   .button-primary:focus {
+    background-color: var(--color-active);
+    transition: var(--transition-variable);
+   }
+   .company-values-list {
+    column-gap: 24px;
+    row-gap: 72px;
+   }
+   .company-values-list-element {
+    width: calc((100% - 24px)/2)
+   }
+
+   .text-contacts {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.48px;
+   }
+
+   .address-list {
+    gap: 12px;
+   }
+   .logo {
+    margin: 24px 120px 24px 16px;
+   }
+
+   .nav-menu {
+    color: var(--color-heading-primary);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+    display: flex;
+    gap: 40px;
+    padding: 24px 0;
+    margin-right: 122px;
+   }
+   .text-h3 {
+    color: var(--color-heading-primary);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+    margin: 0 0 8px;
+   }
+   .our-team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+    justify-content: center;
+   }
+   .customers-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+   }
+   
+   .container-footer {
+    width: 1158px;
+    padding: 0 15px;
+   }
+
+   .h1-section {
+   padding: 188px 0;
+   justify-content: center;
+   }
+
+   .text-h1-first {
+    margin: 0 0 48px;
+   }
+
+   .company-values {
+    padding: 120px 0;
+   }
+   .company-values-list {
+    gap: 24px;
+   }
+   .company-values-list-element {
+    width: calc((100% - 72px)/4)
+   }
+
+   .icon-wrapper-company-values {
+    display:block;
+    border-radius: 4px;
+    background: var(--color-contrast-bright);
+    padding: 24px 100px;
+    margin-bottom: 8px;
+   }
+
+   .text-contacts {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+   }
+
+   .address-list {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 0;
+    padding: 24px 0;
+   }
+
+   .logo {
+    display: inline-block;
+    margin-right: 76px;
+    text-decoration: none;
+   }
+
+   .nav-menu {
+    margin: 0;
+   }
+
+   .company-activities{
+    display:block;
+   }
+
+   .our-team-section {
+    padding: 120px 0;
+   }
+   .our-team-list {
+    gap: 24px;
+    justify-content: space-between;
+   }
+   .customers-list {
+    gap: 24px;
+  }
 }
