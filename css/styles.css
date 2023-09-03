@@ -165,6 +165,10 @@ body {
 }
 .not-hamburger {
   display: none;
+  width: 100vw;
+  justify-content: flex-end;
+  gap: 120px;
+  align-items: center
 }
 
 .js-menu-container {
@@ -335,7 +339,8 @@ padding-bottom: 16px;
  background-position: center;
  padding: 112px 0;
  align-items: center;
- width: 100vw;
+ width: 480px;
+ margin-inline: auto;
 }
 
 .icon-wrapper-company-values {
@@ -378,6 +383,7 @@ padding-bottom: 16px;
 
 .company-values {
  padding: 96px 0;
+ width: 480px;
 }
 
 .company-values-list {
@@ -419,7 +425,8 @@ padding-bottom: 16px;
  background-color: var(--color-contrast-bright);
  padding: 96px 0;
  align-items: center;
- width: 100vw;
+ width: 480px;
+ margin-inline: auto;
 }
 
 .our-team-list {
@@ -492,7 +499,8 @@ padding-bottom: 16px;
 .footer-section {
  background-color: var(--color-heading-primary);
  padding: 96px 0;
- width: 100vw;
+ width: 480px;
+ margin-inline: auto;
 }
 
 .logo-footer  {
@@ -590,6 +598,8 @@ padding-bottom: 16px;
 
 .customers {
   padding: 120px 0;
+  width: 480px;
+  margin-inline: auto;
 }
 
 .customers-list-element {
@@ -806,7 +816,8 @@ padding-bottom: 16px;
   margin-block-end: 16px;
   flex-shrink: 0;
   background-color: var(--color-heading-primary);
-
+  opacity: 0.3;
+  padding-inline-start: 16px;
 }
 
 .wrapper-footer-alt {
@@ -978,8 +989,14 @@ input:checked + .checkmark {
     padding: 0 16px;
    }
    .container-footer {
+    width: 552px;
+    flex-direction: row;
+    justify-content: unset;
+    gap: 72px 24px;
+   }
+
+   .h1-section {
     width: 768px;
-    padding: 0 16px;
    }
 
    .text-h1-first {
@@ -1088,6 +1105,36 @@ input:checked + .checkmark {
   .modal-body {
     width: 408px;
   }
+  .our-team-section {
+    width: 768px;
+  }
+  .footer-section {
+    width: 768px;
+  }
+
+  .column-container-footer-alfa,
+  .column-container-footer-beta,
+  .column-container-footer-omega { 
+    align-items: flex-start;
+  }
+  
+  .wrapper-footer-alt {
+    flex-direction: row;
+
+  }
+  .wrapper-footer-alt > input {
+    margin-block-end: unset;
+    width: 264px;
+    margin-inline-end: 24px;
+  }
+  .company-values {
+    width: 768px;
+    margin-inline: auto;
+  }
+  .customers {
+    margin-inline: auto;
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: 1200px){
@@ -1096,14 +1143,17 @@ input:checked + .checkmark {
     padding: 0 15px;
    }
    
-   .container-footer {
+  .container-footer {
     width: 1158px;
     padding: 0 15px;
+    flex-wrap: nowrap;
+    gap: 0;
    }
 
    .h1-section {
    padding: 188px 0;
    justify-content: center;
+   width: unset
    }
 
    .text-h1-first {
@@ -1112,6 +1162,7 @@ input:checked + .checkmark {
 
    .company-values {
     padding: 120px 0;
+    width: unset;
    }
    .company-values-list {
     gap: 24px;
@@ -1159,6 +1210,7 @@ input:checked + .checkmark {
    .our-team-section {
     padding: 120px 0;
     justify-content: center;
+    width: unset;
    }
    .our-team-list {
     gap: 24px;
@@ -1170,24 +1222,29 @@ input:checked + .checkmark {
 
   .footer-section {
     padding: 100px 0;
+    width: unset;
    }
 
    .column-container-footer-omega {
-    flex-direction: column;
     margin: 0 120px 0 0;
-    gap: 16px;
   }
   
   .column-container-footer-alfa {
-    flex-direction: column;
     margin: 0 80px 0 0;
-    gap: 16px;
   }
   
   .column-container-footer-beta {
-    flex-direction: column;
     margin: 0;
-    gap: 16px;
+  }
+  .not-hamburger {
+    justify-content: space-between;
+  }
+  .customers {
+    width: unset;
+  }
+
+  .wrapper-footer-alt > input {
+    opacity: 1;
   }
 }
 
