@@ -114,10 +114,13 @@ body {
 
 .container-footer {
   display: flex;
-  width: 398px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
   padding: 0;
   margin: 0 auto;
   justify-content: center;
+  row-gap: 72px;
  }
 
 
@@ -130,20 +133,20 @@ body {
 
 .column-container-footer-omega {
   flex-direction: column;
-  margin: 0 120px 0 0;
-  gap: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .column-container-footer-alfa {
   flex-direction: column;
-  margin: 0 80px 0 0;
-  gap: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .column-container-footer-beta {
   flex-direction: column;
-  margin: 0;
-  gap: 16px;
+  display: flex;
+  align-items: center;
 }
 
 .header-border {
@@ -153,6 +156,45 @@ body {
 .nav-header {
  display: flex;
  align-items: center;
+ justify-content: space-between;
+ width: 100%;
+}
+
+.hamburger {
+  stroke: black;
+}
+.not-hamburger {
+  display: none;
+}
+
+.js-menu-container {
+  display:none;
+}
+.js-menu-container.is-open {
+  display:flex;
+  background-color: var(--color-contrast-brighter);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+.wrapper-menu {
+  position: fixed;
+  inset-block-end: 40px;
+}
+
+.wrapper-menu > ul {
+  padding-left: 0;
+  display:flex;
+  margin: 0;
+  gap: 56px;
+}
+
+.div-menu {
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .logo {
@@ -713,6 +755,7 @@ padding-bottom: 16px;
  border: none;
  border-radius: 4px;
  padding: 8px 24px;
+
 }
 
 .button-subscribe:hover,
@@ -738,15 +781,16 @@ padding-bottom: 16px;
   border-radius: 4px;
   border: 1px solid var(--color-contrast-brighter);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-  width: 264px;
+  width: 100%;
   flex-shrink: 0;
   background-color: var(--color-heading-primary);
-  margin-right: 24px;;
-  padding-left: 16px;
+
 }
 
 .wrapper-footer-alt {
   display:flex;
+  flex-direction: column;
+  WIDTH: 100%;
 }
 
 .wrapper-footer-alt > input::placeholder {
@@ -1062,4 +1106,22 @@ input:checked + .checkmark {
   .footer-section {
     padding: 100px 0;
    }
+
+   .column-container-footer-omega {
+    flex-direction: column;
+    margin: 0 120px 0 0;
+    gap: 16px;
+  }
+  
+  .column-container-footer-alfa {
+    flex-direction: column;
+    margin: 0 80px 0 0;
+    gap: 16px;
+  }
+  
+  .column-container-footer-beta {
+    flex-direction: column;
+    margin: 0;
+    gap: 16px;
+  }
 }
