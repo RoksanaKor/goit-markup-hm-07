@@ -124,6 +124,7 @@ body {
   margin: 0 auto;
   justify-content: center;
   row-gap: 72px;
+  align-items: center;
  }
 
 
@@ -725,7 +726,7 @@ padding-bottom: 16px;
 
 .modal-body {
   position: relative;
-  margin: 5vh auto auto;
+  margin: 10vh auto auto;
   width: 90vw;
   height: 90vh;
   transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -734,6 +735,8 @@ padding-bottom: 16px;
   background: var(--color-modal-window);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   cursor: auto;
+  max-width: 408px;
+  max-height: 584px;
 }
 
 .modal-button {
@@ -868,12 +871,12 @@ padding-bottom: 16px;
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin-bottom: 16px;
-  width: 80vw;
+  width: 100%;
 }
 
 .form-modal {
   gap: 5vh;
-  width: 80vw;
+  width: 100%;
 }
 
 .form-label {
@@ -1009,7 +1012,6 @@ input:checked + .checkmark {
   }
   .form-modal {
     gap: 8px;
-    width: 100%;
   }
   .container {
     width: 768px;
@@ -1025,7 +1027,7 @@ input:checked + .checkmark {
    }
 
    .h1-section {
-    width: 768px;
+    width: 100%;
    }
 
    .text-h1-first {
@@ -1138,11 +1140,11 @@ input:checked + .checkmark {
   }
 
   .our-team-section {
-    width: 768px;
+    width: 100%;
   }
 
   .footer-section {
-    width: 768px;
+    width: 100%;
   }
 
   .column-container-footer-alfa,
