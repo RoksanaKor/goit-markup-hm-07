@@ -6,6 +6,8 @@
 
 img {
  display: block;
+ height: auto;
+ width: 100%;
 }
 
 p {
@@ -350,6 +352,7 @@ padding-bottom: 16px;
  padding: 112px 0;
  align-items: center;
  margin-inline: auto;
+ background-size: cover;
 }
 
 .icon-wrapper-company-values {
