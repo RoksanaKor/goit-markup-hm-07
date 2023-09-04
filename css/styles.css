@@ -124,7 +124,6 @@ body {
   margin: 0 auto;
   justify-content: center;
   row-gap: 72px;
-  align-items: center;
  }
 
 
@@ -1080,12 +1079,7 @@ input:checked + .checkmark {
     margin-right: 122px;
    }
    .text-h3 {
-    color: var(--color-heading-primary);
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 1.2;
-    letter-spacing: 0.4px;
-    margin: 0 0 8px;
+    text-align: start;
    }
    .our-team-list {
     column-gap: 24px;
@@ -1195,6 +1189,12 @@ input:checked + .checkmark {
    justify-content: center;
    width: unset
    }
+   .text-h3 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+   }
 
    .text-h1-first {
     margin: 0 0 48px;
@@ -1291,5 +1291,14 @@ input:checked + .checkmark {
 @media screen and (max-width: 320px) {
   body {
     overflow-x: scroll;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .h1-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office@2x.jpg);
   }
 }
